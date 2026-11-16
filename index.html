@@ -424,12 +424,12 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(28px,8vw,3
 
     var lab = $("reel-label"), li = 0;
     lab.textContent = LOADING[0];
-    var labT = setInterval(function(){ li = (li + 1) % LOADING.length; lab.textContent = LOADING[li]; }, 750);
+    var labT = setInterval(function(){ li = (li + 1) % LOADING.length; lab.textContent = LOADING[li]; }, 1400);
     var H = 74, endIdx = seq.length-2, finished = false;
     ul.style.transition = "none";
     ul.style.transform = "translateY(0)";
     void ul.offsetHeight;
-    var dur = reduce ? 900 : 4600;
+    var dur = reduce ? 900 : 9500;
     requestAnimationFrame(function(){
       ul.style.transition = "transform "+dur+"ms cubic-bezier(.12,.62,.08,1)";
       ul.style.transform = "translateY(" + (-(endIdx-1)*H) + "px)";
